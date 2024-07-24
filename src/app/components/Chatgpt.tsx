@@ -3,12 +3,12 @@ import React from "react";
 export default function Chatgpt() {
   return (
     <div>
-      <section className="text-gray-600 body-font shadow-lg p-3 mb-5 bg-white rounded">
+      <section className="text-gray-600 body-font shadow-lg p-16 mb-5 bg-white rounded">
         <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
           <img
             className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
             alt="hero"
-            src="images/p3.png"
+            src="images/p3.jpg"
           />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
