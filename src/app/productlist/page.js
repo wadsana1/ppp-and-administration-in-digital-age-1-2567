@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductList from '/components/ProductList'
+import ProductList from '../components/Productlist'
 
 export default function page() {
   return (
