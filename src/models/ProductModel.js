@@ -6,7 +6,7 @@ const topicSchema = new Schema(
     name: { type: String, required: true },
     image: { type: String, required: true },
     implement: { type: String, required: true },
-    email: { type: String, required: true },
+    email: { type: Number, required: true },
     mobile: { type: String, required: true },
     bunget: { type: Number, required: true },
     year: { type: Number, required: true },

@@ -295,7 +295,7 @@ export default function AddProduct() {
         <div ClassName="flex justify-center items-center mt-10">
           <button
             type="submit"
-            className="btn btn-primary w-full max-w-xs ml-24 flex justify-center items-center"
+            className="btn btn-primary w-full max-w-xs ml-24"
           >
             Add Product
           </button>
