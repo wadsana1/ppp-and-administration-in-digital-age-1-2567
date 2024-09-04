@@ -84,6 +84,7 @@ export default async function ProductList() {
                     </div>
                   </div>
                 </td>
+
                 <td>{element.implementation}</td>
                 <td>{element.email}</td>
                 <td>{element.mobile}</td>
@@ -94,6 +95,7 @@ export default async function ProductList() {
                 <td>{element.strength}</td>
                 <td>{element.development}</td>
                 <td>{element.suggestion}</td>
+                {/* <td></td> */}
                 <th>
                   <Link href={`/editProduct/${element._id}`}>
                     <button className="btn btn-primary">Edit</button>

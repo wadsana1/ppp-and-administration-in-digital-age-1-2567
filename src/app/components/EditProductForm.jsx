@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export default function EditProductForm({
   id,
   name,
-  project,
+  image,
   implementation,
   email,
   mobile,
@@ -20,7 +20,7 @@ export default function EditProductForm({
   suggestion,
 }) {
   const [newName, setNewTitle] = useState(name);
-  const [newProject, setNewProject] = useState(project);
+  const [newImage, setNewImage] = useState(image);
   const [newImplementation, setNewImplementation] = useState(implementation);
   const [newEmail, setNewEmail] = useState(email);
   const [newMobile, setNewMobile] = useState(mobile);
@@ -95,89 +95,176 @@ export default function EditProductForm({
           </div>
           <div className="sm:col-span-3">
             <label
-              htmlFor="first-name"
+              htmlFor="last-name"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
-              ยุทธศาสตร์ชาติ
+              โครงการ
             </label>
             <div className="mt-2">
-            <input
-            onChange={(e) => setNewProject(e.target.value)}
-            value={newProject}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
+              <input
+                onChange={(e) => setNewProject(e.target.value)}
+                value={newProject}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
             </div>
           </div>
 
-          
-          <input
-            onChange={(e) => setNewTitle(e.target.value)}
-            value={newName}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              หน่วยงานที่นำนโยบายไปปฏิบัติ
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewImplementation(e.target.value)}
+                value={newImplementation}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
 
-          <input
-            onChange={(e) => setNewProject(e.target.value)}
-            value={newProject}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewImplementation(e.target.value)}
-            value={newImplementation}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewEmail(e.target.value)}
-            value={newEmail}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewMobile(e.target.value)}
-            value={newMobile}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewBudget(e.target.value)}
-            value={newBudget}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewYear(e.target.value)}
-            value={newYear}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewEvaluation(e.target.value)}
-            value={newEvaluation}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewWeak(e.target.value)}
-            value={newWeak}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewStrength(e.target.value)}
-            value={newStrength}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
-          <input
-            onChange={(e) => setNewDevelopment(e.target.value)}
-            value={newDevelopment}
-            className="input input-bordered input-accent w-full max-w-xs"
-            type="text"
-          />
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              อีเมล
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewEmail(e.target.value)}
+                value={newEmail}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              โทรศัพท์
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewMobile(e.target.value)}
+                value={newMobile}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              งบประมาณ (ล้านบาท)
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewBudget(e.target.value)}
+                value={newBudget}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              ปีงบประมาณ
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewYear(e.target.value)}
+                value={newYear}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              ผลประเมิน
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewEvaluation(e.target.value)}
+                value={newEvaluation}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              จุดอ่อน
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewWeak(e.target.value)}
+                value={newWeak}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              จุดแข็ง
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewStrength(e.target.value)}
+                value={newStrength}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              แนวทางเสริมจุดแข็ง
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e) => setNewDevelopment(e.target.value)}
+                value={newDevelopment}
+                className="input input-bordered input-accent w-full max-w-xs"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-3">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              ข้อเสนอแนะ
+            </label>
+            <div className="mt-2"></div>
+          </div>
+
           <input
             onChange={(e) => setNewSuggestion(e.target.value)}
             value={newSuggestion}

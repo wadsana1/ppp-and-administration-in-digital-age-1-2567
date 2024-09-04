@@ -22,7 +22,7 @@ export default async function EditProduct({ params }) {
   const { product } = await getProductById(id);
   const {
     name,
-    project,
+    image,
     implementation,
     email,
     mobile,
@@ -39,7 +39,7 @@ export default async function EditProduct({ params }) {
     <EditProductForm
       id={id}
       name={name}
-      project={project}
+      image={image}
       implementation={implementation}
       email={email}
       mobile={mobile}
@@ -50,9 +50,7 @@ export default async function EditProduct({ params }) {
       strength={strength}
       development={development}
       suggestion={suggestion}
-      image={image}
-      price={price}
-      category={category}
+     
     />
   );
 }

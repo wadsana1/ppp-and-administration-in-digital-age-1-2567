@@ -23,7 +23,7 @@ export default function AddProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !project) {
+    if (!name || !image) {
       alert("Name and image are required.");
       return;
     }
@@ -200,7 +200,7 @@ export default function AddProduct() {
                 onChange={(e) => setEvaluation(e.target.value)}
                 value={evaluation}
                 className="input input-bordered input-accent w-full max-w-xs"
-                type="float"
+                type="number"
                 placeholder="ผลการประเมิน"
               />
             </div>
@@ -256,23 +256,6 @@ export default function AddProduct() {
               />
             </div>
           </div>
-          {/* <div className="sm:col-span-3">
-    <label
-      htmlFor="last-name"
-      className="block text-sm font-medium leading-6 text-gray-900"
-    >
-      ข้อที่ควรปรับปรุงจุดอ่อน
-    </label>
-    <div className="mt-2">
-    <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
-          className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
-        />
-    </div>
-  </div> */}
           <div className="sm:col-span-3">
             <label
               htmlFor="last-name"
