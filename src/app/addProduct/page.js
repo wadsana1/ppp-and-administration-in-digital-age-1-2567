@@ -23,8 +23,8 @@ export default function AddProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !image) {
-      alert("Name and image are required.");
+    if (!name || !project) {
+      alert("Name and project are required.");
       return;
     }
 
@@ -75,7 +75,7 @@ export default function AddProduct() {
             >
               ยุทธศาสตร์ชาติ
             </label>
-            <div className="mt-2">
+            {/* <div className="mt-2">
               <input
                 onChange={(e) => setName(e.target.value)}
                 value={name}
@@ -83,6 +83,43 @@ export default function AddProduct() {
                 type="text"
                 placeholder="ยุทธศาสตร์ชาติ"
               />
+            </div> */}
+
+            <div className="mt-2">
+              <select
+                className="input input-bordered input-accent w-full max-w-xs"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                type="text"
+                placeholder="ยุทธศาสตร์ชาติ"
+              >
+                <option disabled selected>
+                  ดัชนีแผนแม่บทด้านความมั่นคง
+                </option>
+                <option>ดัชนีสันติภาพโลก</option>
+                <option>ดัชนีความสุขโลก</option>
+                <option>ดัชนีสิทธิมนุษยชนและหลักนิติธรรม</option>
+                <option>ดัชนีสถาบันหลัก</option>
+                <option>ดัชนีเสถียรภาพทางการเมือง</option>
+                <option>ดัชนีสถาบันหลัก</option>
+                <option>
+                  ดัชนีการมีสิทธิ์มีเสียงของประชาชนและภาระรับผิดชอบ{" "}
+                </option>
+                <option>ดัชนีความปลอดภัยจากภัยคุกคาม</option>
+                <option>ดัชนีความสงบสุขภาคใต</option>
+                <option>
+                  ดัชนีประสิทธิภาพของหน่วยงานด้านการข่าวและประชาคมข่าวกรอง
+                </option>
+                <option>ดัชนีความแข็งแกร่งทางกำลังทหาร</option>
+                <option>ดัชนีรัฐเปราะบาง</option>
+                <option>
+                  ดัชนีจำนวนเป้าหมายย่อยของเป้าหมายการพัฒนาที่ยั่งยืน
+                  ในเป้าหมายที่ 17 บรรลุตามที่กำหนด
+                </option>
+                <option>
+                  ดัชนีระดับประสิทธิภาพการดำเนินงานของหน่วยงานด้านการจัดการความมั่นคง
+                </option>
+              </select>
             </div>
           </div>
           <div className="sm:col-span-3">
@@ -98,8 +135,7 @@ export default function AddProduct() {
                 value={project}
                 className="input input-bordered input-accent w-full max-w-xs"
                 type="text"
-                placeholder="/images/1.jpg"
-                defaultValue="/images/1.jpg"
+                placeholder="โครงการ"
               />
             </div>
           </div>
@@ -213,7 +249,7 @@ export default function AddProduct() {
               จุดอ่อน
             </label>
             <div className="mt-2">
-              <input
+              <textarea
                 onChange={(e) => setWeak(e.target.value)}
                 value={weak}
                 className="input input-bordered input-accent w-full max-w-xs"
@@ -230,7 +266,7 @@ export default function AddProduct() {
               จุดแข็ง
             </label>
             <div className="mt-2">
-              <input
+              <textarea
                 onChange={(e) => setStrength(e.target.value)}
                 value={strength}
                 className="input input-bordered input-accent w-full max-w-xs"
